@@ -2,8 +2,11 @@
 Coleção de arquivos que criei enquanto estudo a linguagem.
 
 # ` [OOP] ` - Em Progesso:
-- [ ] Classes
+- [X] Classes
 - - [X] Métodos
 - - [X] Herança
-- - [ ] Polimorfismo
-- - [ ] Composição
+- - [X] Polimorfismo
+- - [X] Composição
+
+- [ ] Organização
+- - [ ] Patterns
