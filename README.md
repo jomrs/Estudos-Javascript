@@ -1,7 +1,7 @@
 # Estudos de Javascript
 Coleção de arquivos que criei enquanto estudo a linguagem.
 
-# ` [OOP] ` - Vendo atualmente:
+# ` [OOP] ` - Em Progesso:
 - [ ] Classes
 - - [X] Métodos
 - - [X] Herança
