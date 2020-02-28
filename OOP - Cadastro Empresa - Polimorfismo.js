@@ -1,32 +1,35 @@
-function Pessoa(nome, tel, email) {
-    this.nome = nome;
-    this.tel = tel;
-    this.email = email;
+class Pessoa {
+    //construtor da classe
+    constructor(nome, tel, email) {
+        this.nome = nome;
+        this.tel = tel;
+        this.email = email;
+    }
+
+    getDados() {
+        return "nome: " + this.nome;
+    };
+
 }
 
-Pessoa.prototype.getDados = function() {
-    return "nome: " + this.nome;
+//Exemplo de polimorfismo
+class Gerente extends Pessoa {
+    constructor(nome, tel, email, setor) {
+        super(nome, tel, email);
+        this.setor = setor;
+    }
+    
+    getDados() {
+        return "Nome: " + this.nome + " - ["+this.setor+"]";
+    }
+
 }
 
-function Gerente(nome, tel, email, setor) {
-    Pessoa.call(this, nome, tel, email);
-    this.setor = setor;
+
+class Funcionario extends Pessoa {
+    getName() { return this.nome };
 }
 
-Gerente.prototype = new Pessoa();
-Gerente.prototype.constructor = Gerente;
-
-//Polimorfismo para com pessoa.
-Gerente.prototype.getDados = function() {
-    return "Nome: " + this.nome + " - ["+this.setor+"]";
-}
-
-function Funcionario(nome, tel, email) {
-    Pessoa.call(this, nome, tel, email);
-}
-
-Funcionario.prototype = new Pessoa();
-Funcionario.prototype.constructor = Funcionario;
 
 
 let pessoa = new Funcionario("john", "322222", "oi@test");
